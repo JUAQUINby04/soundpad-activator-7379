@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1410"/>
+      <stop offset="0.6" stop-color="#2a2018"/>
+      <stop offset="1" stop-color="#1a1410"/>
+    </linearGradient>
+    <linearGradient id="jackGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8d9c5"/>
+      <stop offset="0.5" stop-color="#c4b5a1"/>
+      <stop offset="1" stop-color="#e8d9c5"/>
+    </linearGradient>
+    <linearGradient id="cableGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6b1a"/>
+      <stop offset="1" stop-color="#c44e10"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#3ad6c8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3ad6c8" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background square panel -->
+  <rect x="8" y="8" width="240" height="240" rx="6" fill="#1a1410"/>
+  <rect x="8" y="8" width="240" height="240" rx="6" fill="url(#panelGrad)" opacity="0.8"/>
+
+  <!-- Panel border inset -->
+  <rect x="14" y="14" width="228" height="228" rx="4" fill="none" stroke="#3a2e24" stroke-width="1"/>
+  <rect x="18" y="18" width="220" height="220" rx="3" fill="none" stroke="#e8d9c5" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Perforated metal panel - grid of holes -->
+  <g fill="#0f0c09" stroke="#3a2e24" stroke-width="0.8">
+    <!-- Row 1 -->
+    <circle cx="44" cy="44" r="6"/>
+    <circle cx="76" cy="44" r="6"/>
+    <circle cx="108" cy="44" r="6"/>
+    <circle cx="140" cy="44" r="6"/>
+    <circle cx="172" cy="44" r="6"/>
+    <circle cx="204" cy="44" r="6"/>
+    <!-- Row 2 -->
+    <circle cx="44" cy="76" r="6"/>
+    <circle cx="76" cy="76" r="6"/>
+    <circle cx="108" cy="76" r="6"/>
+    <circle cx="140" cy="76" r="6"/>
+    <circle cx="172" cy="76" r="6"/>
+    <circle cx="204" cy="76" r="6"/>
+    <!-- Row 3 -->
+    <circle cx="44" cy="108" r="6"/>
+    <circle cx="76" cy="108" r="6"/>
+    <circle cx="140" cy="108" r="6"/>
+    <circle cx="172" cy="108" r="6"/>
+    <circle cx="204" cy="108" r="6"/>
+    <!-- Row 4 -->
+    <circle cx="44" cy="140" r="6"/>
+    <circle cx="76" cy="140" r="6"/>
+    <circle cx="108" cy="140" r="6"/>
+    <circle cx="140" cy="140" r="6"/>
+    <circle cx="172" cy="140" r="6"/>
+    <circle cx="204" cy="140" r="6"/>
+    <!-- Row 5 -->
+    <circle cx="44" cy="172" r="6"/>
+    <circle cx="76" cy="172" r="6"/>
+    <circle cx="108" cy="172" r="6"/>
+    <circle cx="140" cy="172" r="6"/>
+    <circle cx="172" cy="172" r="6"/>
+    <circle cx="204" cy="172" r="6"/>
+    <!-- Row 6 -->
+    <circle cx="44" cy="204" r="6"/>
+    <circle cx="76" cy="204" r="6"/>
+    <circle cx="108" cy="204" r="6"/>
+    <circle cx="140" cy="204" r="6"/>
+    <circle cx="172" cy="204" r="6"/>
+    <circle cx="204" cy="204" r="6"/>
+  </g>
+
+  <!-- Highlighted target hole (plugged) -->
+  <circle cx="108" cy="108" r="10" fill="#1a1410" stroke="#3ad6c8" stroke-width="1.5"/>
+  <circle cx="108" cy="108" r="10" fill="url(#glowGrad)" opacity="0.4"/>
+
+  <!-- Patch cable coming from top-left, curving down to the jack -->
+  <path d="M 30 30 Q 50 80 85 95 Q 95 100 102 105"
+        fill="none" stroke="url(#cableGrad)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 30 30 Q 50 80 85 95 Q 95 100 102 105"
+        fill="none" stroke="#ff8a45" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Cable connector body (barrel) -->
+  <path d="M 96 99 L 108 99 L 108 117 L 96 117 Z" fill="url(#jackGrad)" stroke="#1a1410" stroke-width="1"/>
+  <!-- Barrel ridges -->
+  <line x1="98" y1="101" x2="98" y2="115" stroke="#1a1410" stroke-width="1" opacity="0.6"/>
+  <line x1="101" y1="101" x2="101" y2="115" stroke="#1a1410" stroke-width="1" opacity="0.6"/>
+  <line x1="104" y1="101" x2="104" y2="115" stroke="#1a1410" stroke-width="1" opacity="0.6"/>
+
+  <!-- Jack tip plugging into hole -->
+  <polygon points="108,102 114,104 114,112 108,114" fill="#e8d9c5" stroke="#1a1410" stroke-width="0.8"/>
+  <polygon points="114,104 118,106 118,110 114,112" fill="#3ad6c8" stroke="#1a1410" stroke-width="0.8"/>
+
+  <!-- Spark/activation burst at connection point -->
+  <g stroke="#3ad6c8" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+    <line x1="118" y1="108" x2="126" y2="108"/>
+    <line x1="116" y1="102" x2="121" y2="98"/>
+    <line x1="116" y1="114" x2="121" y2="118"/>
+  </g>
+
+  <!-- Signal waveform emanating right -->
+  <polyline points="126,108 132,100 138,116 144,96 150,120 156,104 162,112 168,108"
+            fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small tech accent marks -->
+  <rect x="172" y="100" width="4" height="16" rx="1" fill="#3ad6c8" opacity="0.6"/>
+  <rect x="180" y="104" width="3" height="8" rx="1" fill="#e8d9c5" opacity="0.3"/>
+
+  <!-- Worn texture scratches -->
+  <g stroke="#e8d9c5" stroke-width="0.4" opacity="0.12">
+    <line x1="20" y1="30" x2="60" y2="25"/>
+    <line x1="180" y1="220" x2="230" y2="215"/>
+    <line x1="25" y1="200" x2="55" y2="195"/>
+    <line x1="200" y1="35" x2="235" y2="30"/>
+  </g>
+
+  <!-- Bottom LED indicator strip -->
+  <rect x="100" y="232" width="56" height="3" rx="1.5" fill="#3a2e24"/>
+  <rect x="102" y="232" width="20" height="3" rx="1.5" fill="#ff6b1a" opacity="0.8"/>
+  <rect x="124" y="232" width="8" height="3" rx="1.5" fill="#3ad6c8" opacity="0.6"/>
+  <rect x="134" y="232" width="20" height="3" rx="1.5" fill="#3a2e24"/>
+
+  <!-- Corner brackets for industrial feel -->
+  <path d="M 20 20 L 20 28 M 20 20 L 28 20" stroke="#e8d9c5" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <path d="M 236 20 L 236 28 M 236 20 L 228 20" stroke="#e8d9c5" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <path d="M 20 236 L 20 228 M 20 236 L 28 236" stroke="#e8d9c5" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <path d="M 236 236 L 236 228 M 236 236 L 228 236" stroke="#e8d9c5" stroke-width="1.5" opacity="0.4" fill="none"/>
+</svg>
